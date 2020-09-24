@@ -1,0 +1,46 @@
+.sidenav {
+    grid-area: sidenav;
+    padding: 30px;
+    background: #f2f2f2;
+}
+.sidenav a{
+    display: block;
+    min-width: 90px;
+    max-width: 100px;
+    margin: 0 auto 30px auto;
+    background: #fff;
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(44,44,44,0.15);
+    transition: .1s ease-in-out;
+    &:hover{
+        background: $color6
+    }
+   & img{
+       border-radius: 0 !important;
+   }
+}
+.sidenav nav{
+    @include device(sm){
+    overflow-x: scroll;
+    }
+}
+.sidenav ul {
+    @include device(sm){
+     display: flex;
+     margin-bottom: 30px;
+    }
+      & li{
+        @include device(sm){
+         flex: 1 0 100px;
+        }
+        & a{
+            @include device(sm){
+                margin: 0 20px;
+            }
+            
+        }
+    }
+  
+   
+}

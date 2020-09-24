@@ -1,0 +1,16 @@
+.aside{
+    background-color: #f2f2f2;
+    display: grid;
+    align-content: start;
+    gap: 30px;
+    padding: 30px;
+    grid-area: aside;
+    @include device(xxl){
+        grid-template-columns: repeat(2,minmax(110px,1fr));
+    }
+}
+.aside div{
+    background: white;
+    padding: 10px;
+    cursor: pointer;
+}

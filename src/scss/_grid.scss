@@ -1,0 +1,31 @@
+.grid{
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 4fr 300px;
+    grid-template-areas: 
+    'header header header'
+    'sidenav main aside'
+    'footer footer footer'
+    ;
+    @include device(sm){
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        'header'
+        'sidenav'
+        'main'
+        'aside'
+        'footer'
+        ;
+    }
+    @include device(lg){
+        grid-template-columns: minmax(160px, 1fr) 4fr;
+        grid-template-areas: 
+        'header header '
+        'sidenav main '
+        'sidenav aside '
+        'footer footer'
+        ;
+    }
+    
+    
+   
+}

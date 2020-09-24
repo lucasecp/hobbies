@@ -1,0 +1,33 @@
+@mixin device($width){
+    @if($width == 'sm'){
+        @media (max-width: 720px){
+            @content
+        }
+    };
+    @if($width == 'md'){
+        @media (min-width: 721px) and (max-width: 800px){
+            @content
+        }
+    };
+    @if($width == 'lg'){
+        @media (min-width: 721px) and (max-width: 1300px){
+            @content
+        }
+    };
+    @if($width == 'xl'){
+        @media (max-width: 1200px){
+            @content
+        }
+    };
+    @if($width == 'xxl'){
+        @media (max-width: 1300px){
+            @content
+        }
+    };
+    @if($width == 'lg-lg'){
+        @media (min-width: 801px){
+            @content
+        }
+    }
+    
+}

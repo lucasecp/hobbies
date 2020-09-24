@@ -1,0 +1,143 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    grid-area: header;
+    background: $color3;
+    @include device(sm){
+        padding: 10px;
+        & > a, .nav, .search{
+       margin-bottom: 10px; 
+         }
+    }
+}
+header > a{
+    width: 90px;
+}
+.icon-menu{
+    width:40px;
+    display: none;
+    cursor: pointer;
+    @include device(sm){
+        display: block;
+    }
+}
+.menu{
+    @include device(lg-lg){
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    @include device(sm){ 
+        display: none;
+        position: absolute;
+        top: -100%;
+        &.active{
+            width:100%;
+            background: $color3;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            top: 100px;
+            left:0;
+            padding:10px 0 0 10px;
+            & ul{
+                flex-direction: column;
+                padding: 0;
+                & li{
+                    margin-bottom: 10px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    @include device(md){
+        flex-direction: column;
+    }
+}
+.bg-toggle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    left:0;
+    display: none;
+    background: transparent;
+    @include device(sm){
+        display: block;
+        z-index: 1;
+    }
+}
+.nav{
+    @include device(md){
+        margin-bottom: 20px;
+    }
+}
+
+.nav ul{
+    display: flex;
+    margin-right: 70px;
+    flex-wrap: wrap;
+    @include device(sm){
+    }
+    & li{
+        border-radius: 5px;
+        cursor: pointer;
+        color: $color1;
+        padding:10px;
+        transition: ease-in-out .1s;
+        background: rgba(0,0,0,0.2);
+        &:hover{
+            background: $color6;
+        }
+    }
+}
+header li+li{
+    margin-left: 20px;
+}
+.search{
+    @include device(sm){
+        width: 100%;
+    }
+}
+
+.search-img{
+    width: 20px;
+    display: inline-block;
+    position: relative;
+    left: -30px;
+    bottom: -5px;
+}
+.search-img img{
+    margin: auto 0
+}
+.search input{
+    padding:10px;
+    font-size: 1.1em;
+    height: 40px;
+    border-radius: 5px;
+    border: solid $color1 2px;
+    outline:none;
+    @include device(sm){
+        width: 80%;
+    }
+}
+.search a{
+    color:$color1;
+    border: solid $color1 2px;
+    border-radius: 5px;
+    padding: 10px;
+    &:hover{
+      background: $color6;
+    }
+    @include device(sm){
+        display: block;
+        width:70px;
+        margin-top: 10px
+    }
+   
+}
+
