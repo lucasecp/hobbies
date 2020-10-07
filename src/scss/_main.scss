@@ -5,6 +5,9 @@
     padding: 30px ;
     gap: 30px;
     margin:0 auto;
+    @include device(sm){
+    padding:0;
+    }
 }
 .main h1{
     text-align: center;
